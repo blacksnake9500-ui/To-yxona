@@ -1,0 +1,994 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-image: url("../imgs/hero bg img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  color: white;
+}
+header nav .container .bars {
+  display: none;
+}
+header nav .container ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+header nav .container ul li {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+header nav .container ul li:hover {
+  color: #576250;
+  animation: logo 0.6s linear infinite;
+}
+@keyframes logo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+header nav .container ul li::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+  background-color: #576250;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -5px;
+}
+header nav .container ul li:hover::after {
+  width: 100%;
+}
+header .hero .container {
+  text-align: center;
+  padding: 100px 200px;
+}
+header .hero .container h1 {
+  font-size: 56px;
+  font-family: "Playfair Display", serif;
+  color: #576250;
+  padding-bottom: 40px;
+}
+header .hero .container p {
+  padding: 0px 100px;
+  padding-bottom: 50px;
+  color: #90998b;
+}
+header .hero .container .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  color: #90998b;
+}
+
+.s1 .container {
+  padding-bottom: 40px;
+}
+.s1 .container .s1_title {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  line-height: 40px;
+}
+.s1 .container .s1_title h1 {
+  color: #576250;
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+}
+.s1 .container .s1_title p {
+  color: #90998b;
+}
+.s1 .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.s1 .container .box .card {
+  width: 270px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+.s1 .container .box .card:hover {
+  transform: scale(1.05);
+}
+.s1 .container .box .card:hover p {
+  transform: translate(0px);
+}
+.s1 .container .box .card p {
+  position: absolute;
+  transition: all 0.3s ease;
+  transform: translate(-300px);
+  overflow: hidden;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+.s1 .container .box .card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.s1 .container .box .card:nth-of-type(8) {
+  position: relative;
+  background-color: #576250;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.s1 .container .box .card:nth-of-type(8):hover span {
+  transform: translate(0px);
+}
+.s1 .container .box .card:nth-of-type(8) span {
+  position: absolute;
+  transform: translate(-300px);
+  top: 20px;
+  right: 20px;
+  transition: all 0.3s ease;
+}
+.s1 .container .box .card:nth-of-type(8) span i {
+  transform: rotate(-135deg);
+  transition: all 0.3s ease;
+}
+
+.s2 .container {
+  padding-bottom: 50px;
+}
+.s2 .container .s2_title {
+  padding: 40px;
+  color: #98a093;
+}
+.s2 .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 10px;
+}
+.s2 .container .box .card:nth-of-type(2) {
+  width: 563px;
+}
+.s2 .container .box .card:nth-of-type(2) h3 {
+  padding-bottom: 70px;
+  font-family: "Playfair Display", serif;
+  color: #90998b;
+}
+.s2 .container .box .card:nth-of-type(2) h3 span {
+  color: #576250;
+}
+.s2 .container .box .card:nth-of-type(2) h1 {
+  font-family: "playfair display, serif";
+  color: #576250;
+}
+.s2 .container .box .card:nth-of-type(2) p {
+  padding-bottom: 15px;
+  padding-top: 20px;
+  color: #90998b;
+}
+.s2 .container .box .card:nth-of-type(2) p span {
+  color: black;
+}
+.s2 .container .box .card:nth-of-type(2) .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  color: #90998b;
+}
+
+.s3 {
+  background-image: url("../imgs/s3 bg img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 999;
+}
+.s3 .container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 100px;
+  padding: 50px;
+}
+.s3 .container .s3_title {
+  width: 235px;
+  padding: 50px 15px;
+  padding-bottom: 130px;
+}
+.s3 .container .s3_title h1 {
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  color: #576250;
+  padding-bottom: 10px;
+}
+.s3 .container .s3_title p {
+  color: #90998b;
+}
+.s3 .container .box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 100px;
+}
+.s3 .container .box .card {
+  text-align: center;
+  width: 234px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(128, 128, 128, 0.466);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.s3 .container .box .card:hover {
+  transform: translateY(-20px);
+}
+.s3 .container .box .card img {
+  width: 100%;
+}
+.s3 .container .box .card p {
+  color: #576250;
+}
+
+.s4 .container {
+  padding: 50px 0px;
+}
+.s4 .container .s4_title {
+  color: #576250;
+  padding-bottom: 20px;
+  padding: 20px 80px;
+}
+.s4 .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.s4 .container .box .card {
+  width: 512px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.s4 .container .box .card:hover .info {
+  transform: translateY(0);
+}
+.s4 .container .box .card *:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+.s4 .container .box .card .info {
+  position: absolute;
+  bottom: 30px;
+  left: 180px;
+  color: white;
+  line-height: 30px;
+  text-align: center;
+  transform: translateY(500px);
+  transition: all 0.3s ease;
+}
+.s4 .container .box .card .info h4 {
+  font-weight: 300;
+}
+.s4 .container .box .card .info h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+.s4 .container .box .card img {
+  width: 100%;
+}
+
+.s5 {
+  background-color: #576250;
+}
+.s5 .container .s5_title {
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  padding: 50px;
+}
+.s5 .container .s5_title p {
+  color: #98a093;
+}
+.s5 .container .s5_title h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+.s5 .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-direction: column;
+  position: relative;
+}
+.s5 .container .box .arrow {
+  color: white;
+  position: absolute;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 800px;
+}
+.s5 .container .box .quote {
+  display: flex;
+  align-items: center;
+  gap: 750px;
+  position: absolute;
+  top: 20px;
+  font-weight: 400;
+  font-size: 40px;
+}
+.s5 .container .box p {
+  padding-bottom: 50px;
+  color: white;
+  width: 700px;
+  text-align: center;
+}
+.s5 .container .box .bottom {
+  text-align: center;
+  line-height: 30px;
+}
+
+.s6 .container {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+}
+.s6 .container form {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+.s6 .container form .form_title {
+  line-height: 40px;
+  padding: 20px;
+}
+.s6 .container form .form_title h1 {
+  font-family: "Playfair Display", serif;
+  color: #576250;
+}
+.s6 .container form .form_title h1 p {
+  color: #98a093;
+}
+.s6 .container form .card {
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  flex-direction: column;
+  text-align: left;
+}
+.s6 .container form .card button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: #576250;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.s6 .container form .card button:hover {
+  background-color: transparent;
+  color: #576250;
+  border: 1px solid #576250;
+  transform: scale(1.1);
+}
+.s6 .container form .card button:active {
+  transform: scale(0.9);
+}
+.s6 .container form .card .area {
+  padding-bottom: 50px;
+}
+.s6 .container form .card h3 {
+  color: #98a093;
+  font-weight: 300;
+}
+.s6 .container form .card input {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.s6 .container form .card input:hover {
+  border: 1px solid #576250;
+}
+.s6 .container .box h3 {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  color: #576250;
+}
+.s6 .container .box p {
+  color: #98a093;
+  padding: 5px;
+}
+.s6 .container .box .app h3 {
+  color: #98a093;
+}
+.s6 .container .box .app i {
+  color: #576250;
+}
+
+footer {
+  background-color: #424242;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+footer .container ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+footer .container ul li {
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+footer .container ul li::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+  background-color: white;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -4px;
+}
+footer .container ul li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  header {
+    background-image: url("../imgs/hero bg img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  header nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    color: white;
+  }
+  header nav .container .bars {
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  header nav .container .bars:hover {
+    color: #576250;
+    transform: scale(1.1);
+  }
+  header nav .container audio {
+    display: none;
+  }
+  header nav .container ul {
+    display: flex;
+    align-items: center;
+    display: none;
+    gap: 40px;
+  }
+  header nav .container ul li {
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  header nav .container ul li:hover {
+    color: #576250;
+    animation: logo 0.6s linear infinite;
+  }
+  @keyframes logo {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+  header nav .container ul li::after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: #576250;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -5px;
+  }
+  header nav .container ul li:hover::after {
+    width: 100%;
+  }
+  header .hero .container {
+    text-align: center;
+    padding: 100px 200px;
+  }
+  header .hero .container h1 {
+    font-size: 56px;
+    font-family: "Playfair Display", serif;
+    color: #576250;
+    padding-bottom: 40px;
+  }
+  header .hero .container p {
+    padding: 0px 50px;
+    padding-bottom: 50px;
+    color: #90998b;
+  }
+  header .hero .container .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    color: #90998b;
+    color: white;
+  }
+  .s1 .container {
+    padding-bottom: 40px;
+  }
+  .s1 .container .s1_title {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .s1 .container .s1_title h1 {
+    color: #576250;
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+  }
+  .s1 .container .s1_title p {
+    color: #90998b;
+  }
+  .s1 .container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .s1 .container .box .card {
+    width: 270px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+    cursor: pointer;
+  }
+  .s1 .container .box .card:hover {
+    transform: scale(1.05);
+  }
+  .s1 .container .box .card:hover p {
+    transform: translate(0px);
+  }
+  .s1 .container .box .card p {
+    position: absolute;
+    transition: all 0.3s ease;
+    transform: translate(-300px);
+    overflow: hidden;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+  }
+  .s1 .container .box .card img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .s1 .container .box .card:nth-of-type(8) {
+    position: relative;
+    background-color: #576250;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .s1 .container .box .card:nth-of-type(8):hover span {
+    transform: translate(0px);
+  }
+  .s1 .container .box .card:nth-of-type(8) span {
+    position: absolute;
+    transform: translate(-300px);
+    top: 20px;
+    right: 20px;
+    transition: all 0.3s ease;
+  }
+  .s1 .container .box .card:nth-of-type(8) span i {
+    transform: rotate(-135deg);
+    transition: all 0.3s ease;
+  }
+  .s2 .container {
+    padding-bottom: 50px;
+  }
+  .s2 .container .s2_title {
+    padding: 40px;
+    color: #98a093;
+  }
+  .s2 .container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 100px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.219);
+    border-radius: 10px;
+  }
+  .s2 .container .box .card:nth-of-type(2) {
+    width: 563px;
+  }
+  .s2 .container .box .card:nth-of-type(2) h3 {
+    padding-bottom: 70px;
+    font-family: "Playfair Display", serif;
+    color: #90998b;
+  }
+  .s2 .container .box .card:nth-of-type(2) h3 span {
+    color: #576250;
+  }
+  .s2 .container .box .card:nth-of-type(2) h1 {
+    font-family: "playfair display, serif";
+    color: #576250;
+  }
+  .s2 .container .box .card:nth-of-type(2) p {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    color: #90998b;
+  }
+  .s2 .container .box .card:nth-of-type(2) p span {
+    color: black;
+  }
+  .s2 .container .box .card:nth-of-type(2) .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    color: #90998b;
+  }
+  .s3 {
+    background-image: url("../imgs/s3 bg img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 999;
+  }
+  .s3 .container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 50px;
+  }
+  .s3 .container .s3_title {
+    width: 235px;
+    padding: 10px 15px;
+    padding-bottom: 10px;
+  }
+  .s3 .container .s3_title h1 {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    color: #576250;
+    padding-bottom: 10px;
+  }
+  .s3 .container .s3_title p {
+    color: #90998b;
+  }
+  .s3 .container .box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 0px;
+  }
+  .s3 .container .box .card {
+    text-align: center;
+    width: 234px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(128, 128, 128, 0.466);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .s3 .container .box .card:hover {
+    transform: translateY(-20px);
+  }
+  .s3 .container .box .card img {
+    width: 100%;
+  }
+  .s3 .container .box .card p {
+    color: #576250;
+  }
+  .s4 .container {
+    padding: 50px 0px;
+  }
+  .s4 .container .s4_title {
+    color: #576250;
+    padding-bottom: 20px;
+    padding: 20px 80px;
+  }
+  .s4 .container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .s4 .container .box .card {
+    width: 512px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .s4 .container .box .card:hover .info {
+    transform: translateY(0);
+  }
+  .s4 .container .box .card *:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+    border-radius: 10px;
+  }
+  .s4 .container .box .card .info {
+    position: absolute;
+    bottom: 30px;
+    left: 180px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    transform: translateY(500px);
+    transition: all 0.3s ease;
+  }
+  .s4 .container .box .card .info h4 {
+    font-weight: 300;
+  }
+  .s4 .container .box .card .info h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+  }
+  .s4 .container .box .card img {
+    width: 100%;
+  }
+  .s5 {
+    background-color: #576250;
+  }
+  .s5 .container .s5_title {
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    padding: 50px;
+  }
+  .s5 .container .s5_title p {
+    color: #98a093;
+  }
+  .s5 .container .s5_title h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+  }
+  .s5 .container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    flex-direction: column;
+    position: relative;
+  }
+  .s5 .container .box .arrow {
+    color: white;
+    position: absolute;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    gap: 320px;
+  }
+  .s5 .container .box .quote {
+    display: flex;
+    align-items: center;
+    gap: 310px;
+    position: absolute;
+    top: 10px;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .s5 .container .box p {
+    padding-bottom: 50px;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  .s5 .container .box .bottom {
+    text-align: center;
+    line-height: 30px;
+  }
+  .s6 .container {
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 200px;
+  }
+  .s6 .container form {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .s6 .container form .form_title {
+    line-height: 40px;
+    padding: 20px;
+  }
+  .s6 .container form .form_title h1 {
+    font-family: "Playfair Display", serif;
+    color: #576250;
+  }
+  .s6 .container form .form_title h1 p {
+    color: #98a093;
+  }
+  .s6 .container form .card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    flex-direction: column;
+    text-align: left;
+  }
+  .s6 .container form .card button {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #576250;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .s6 .container form .card button:hover {
+    background-color: transparent;
+    color: #576250;
+    border: 1px solid #576250;
+    transform: scale(1.1);
+  }
+  .s6 .container form .card button:active {
+    transform: scale(0.9);
+  }
+  .s6 .container form .card .area {
+    padding-bottom: 50px;
+  }
+  .s6 .container form .card h3 {
+    color: #98a093;
+    font-weight: 300;
+  }
+  .s6 .container form .card input {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  .s6 .container form .card input:hover {
+    border: 1px solid #576250;
+  }
+  .s6 .container .box {
+    text-align: center;
+  }
+  .s6 .container .box h3 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #576250;
+  }
+  .s6 .container .box p {
+    color: #98a093;
+    padding: 5px;
+  }
+  .s6 .container .box .app h3 {
+    color: #98a093;
+  }
+  .s6 .container .box .app i {
+    color: #576250;
+  }
+  footer {
+    background-color: #424242;
+  }
+  footer .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  footer .container ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+  }
+  footer .container ul li {
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  footer .container ul li::after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: white;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -4px;
+  }
+  footer .container ul li:hover::after {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
